@@ -16,7 +16,7 @@
         ['lang' => 'ru'],
     ], $current_lang);
 
-    if (!in_array($current_lang, $lang->langs(true))) {
+    if (empty($current_lang) || !in_array($current_lang, $lang->langs(true))) {
         $router->redirect('/hu');
     }
 
